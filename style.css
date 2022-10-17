@@ -7,11 +7,17 @@ body{
     sans-serif;
 }
 .menu{
-    background-color:#D93B92;
-    padding: 20px 20px;
+    background-color:#F26444;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    top: 0px;
+    position: fixed;
+}
+.menu a {
     color: white;
     text-decoration: none;
-    text-align: center;
+    font-size: 16px;
 }
 h1{
     font-size: 25px;
@@ -21,9 +27,11 @@ border-radius: 100%;
 }
 .header{
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+    background-color: #1D1C40;
+    padding: 100px 100px;
+    color: white;
+    top: 100px;
+    display;
     
 }
 .icon{
