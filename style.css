@@ -8,7 +8,7 @@ body{
 }
 .menu{
     background-color:#F26444;
-    padding: 20px;
+    padding: 0px;
     width: 100%;
     display: flex;
     top: 0px;
@@ -18,7 +18,15 @@ body{
     color: white;
     text-decoration: none;
     font-size: 16px;
+    display: flex;
+    padding: 20px;
 }
+.menu a:hover {
+    color: #1D1C40;
+    font-size: 20px;
+    transition: 1s;
+}
+
 h1{
     font-size: 25px;
 }
@@ -40,4 +48,8 @@ border-radius: 100%;
     margin-right: auto;
     text-align: center;
     display: inline;
+    background-color: #ffffff18;
+    border-radius: 100px;
+    padding: 5px 5px;
+    top: 100px;
 }
