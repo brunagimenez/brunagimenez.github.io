@@ -1,55 +1,73 @@
 *{
     margin: 0;
-    padding: 0;
 }
-body{
-    font-family: noto-sans,
-    sans-serif;
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 7% 1% 7%;
+    background-color: #42478b;
 }
 .menu{
-    background-color:#F26444;
-    padding: 0px;
-    width: 100%;
     display: flex;
-    top: 0px;
-    position: fixed;
+    justify-content: space-around;
+    width: 70%;
+    align-self: center;
 }
-.menu a {
-    color: white;
+.menu > a{
+    font-size: 1.2em;
     text-decoration: none;
-    font-size: 16px;
-    display: flex;
-    padding: 20px;
-}
-.menu a:hover {
-    color: #1D1C40;
-    font-size: 20px;
-    transition: 1s;
-}
-
-h1{
-    font-size: 25px;
-}
-.picture{
-border-radius: 100%;
-}
-.header{
-    text-align: center;
-    background-color: #1D1C40;
-    padding: 100px 100px;
     color: white;
-    top: 100px;
-    display;
-    
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
-.icon{
-    width: 30px;
-    margin-left: auto;
-    margin-right: auto;
+#line{
+    height: 1px;
+    background-color:#54599e;
+}
+header {
+    background-color: #42478b;
+    padding: 5%;
+    /* background-image: url(https://www.pngmart.com/files/22/Background-PNG-Isolated-HD.png);
+    background-repeat: no-repeat; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    align-items: center;
+}
+.link-social-media {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+h1,h4{
+    padding: 0.5%;
+    color: white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+h1{
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+h4{
+    font-size: 0.8em;
     text-align: center;
-    display: inline;
-    background-color: #ffffff18;
-    border-radius: 100px;
-    padding: 5px 5px;
-    top: 100px;
+    font-weight: lighter;
+}
+section>img{
+    border-radius: 100%;
+}
+button{
+    font-size: 0.9em;
+    border-radius: 40px;
+    padding: 6px 14px 6px 14px;
+    font-weight: 600;
+    color: white;
+    background-color: #9B22FC;
+    box-shadow: -71px 0px 57px -15px #407bff inset;
+    border: none;
 }
