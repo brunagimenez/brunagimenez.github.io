@@ -14,31 +14,31 @@
 }
 
 img:hover + .link-home::before {
-    margin-top: -276px;
+    margin-top: -360px;
     content: 'Home';
 }
 
 img:hover + .link-about::before {
-    margin-top: -233px;
+    margin-top: -315px;
     content: 'Sobre';
 }
 
 img:hover + .link-soft::before {
-    margin-top: -187px;
+    margin-top: -270px;
     content: 'Habilidades';
 }
 
 img:hover + .link-project::before {
-    margin-top: -140px;
+    margin-top: -225px;
     content: 'Projetos';
 }
 
 img:hover + .link-blog::before {
-    margin-top: -99px;
+    margin-top: -180px;
     content: 'Blog';
 }
 
 img:hover + .link-contact::before {
-    margin-top: -53px;
+    margin-top: -135px;
     content: 'Contato';
 }

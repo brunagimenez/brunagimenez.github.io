@@ -18,7 +18,7 @@
   }
   
   /* Reinicie os estilos padrão para determinados elementos HTML */
-  h1, h2, h3, h4, h5, h6 {
+ h3, h4, h5, h6 {
     font-size: 1em;
     font-weight: normal;
   }
@@ -41,3 +41,21 @@
   img {
     max-width: 100%;
   }
+
+  h1{
+    font-size: 40px;
+    font-weight: 900;
+    padding-right: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 200;
+  padding-right: 5px;
+}
+
+p {
+  text-align:left;
+  line-height: 180%;
+  width: 50%;
+}
