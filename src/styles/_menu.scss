@@ -1,0 +1,44 @@
+.link::before {
+    content: "";
+    display: none; /* esconde o conteúdo por padrão */
+  }
+
+  img:hover + .link::before {
+    display: inline-block;
+    position: absolute;
+    background-color: $color-primary-tryellow;
+    padding: 2px;
+    border-radius: 5px;
+    left: 57px;
+    top: 50%;
+}
+
+img:hover + .link-home::before {
+    margin-top: -276px;
+    content: 'Home';
+}
+
+img:hover + .link-about::before {
+    margin-top: -233px;
+    content: 'Sobre';
+}
+
+img:hover + .link-soft::before {
+    margin-top: -187px;
+    content: 'Habilidades';
+}
+
+img:hover + .link-project::before {
+    margin-top: -140px;
+    content: 'Projetos';
+}
+
+img:hover + .link-blog::before {
+    margin-top: -99px;
+    content: 'Blog';
+}
+
+img:hover + .link-contact::before {
+    margin-top: -53px;
+    content: 'Contato';
+}

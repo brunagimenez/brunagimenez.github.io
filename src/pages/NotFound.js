@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function App() {
   return (
-    <section>
+    <main>
       <h1>Not Found</h1>
-    </section>
+    </main>
   );
 }

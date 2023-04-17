@@ -1,14 +1,13 @@
 import React from 'react';
 import MenuAside from '../components/MenuAside';
 import Header from '../components/Header';
-import Photo from '../image/foto bruna.png';
 
 export default function Home() {
   return (
-    <section>
+    <>
       <Header />
       <MenuAside />
-      <div>
+      <main>
         <div>
           <h1>Bruna</h1>
           <h1>Gimenez</h1>
@@ -21,10 +20,7 @@ export default function Home() {
           <button>Dowloand CV</button>
           <button>Contato</button>
         </div>
-      </div>
-      <div>
-        <img src={ Photo } alt="Foto Bruna" width="150px" />
-      </div>
-    </section>
+      </main>
+    </>
   );
 }
