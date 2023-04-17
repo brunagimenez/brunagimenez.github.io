@@ -1,10 +1,16 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router-dom';
 import MenuAside from '../components/MenuAside';
 import Header from '../components/Header';
 import { TranslationContext } from '../context/TranslationContext';
 
 export default function Home() {
   const { translation } = useContext(TranslationContext);
+  const history = useHistory();
+
+  const navToContact = () => {
+    history.push('/contact');
+  };
   return (
     <>
       <Header />
@@ -24,8 +30,8 @@ export default function Home() {
         <div>
           <button>Download CV</button>
           {translation
-            ? <button className="home-button"> Contact </button>
-            : <button className="home-button"> Contato </button>}
+            ? <button className="home-button" onClick={ navToContact }> Contact </button>
+            : <button className="home-button" > Contato </button>}
         </div>
       </main>
     </>

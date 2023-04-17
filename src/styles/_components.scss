@@ -35,3 +35,6 @@ main button{
 .home-button {
     margin-left: 15px;
 }
+main button:hover {
+    background-color: $color-primary-tryellow;
+}
