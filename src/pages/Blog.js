@@ -8,7 +8,7 @@ export default function Blog() {
       <MenuAside />
       <Header />
       <main>
-        <h1>Blog</h1>
+        <h1>Blog em breve ...</h1>
       </main>
     </>
   );

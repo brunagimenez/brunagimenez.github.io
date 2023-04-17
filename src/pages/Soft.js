@@ -16,7 +16,7 @@ export default function Soft() {
       <Header />
       <main>
         <h1>Habilidades</h1>
-        <section className="softIMG">
+        <section className="container softIMG">
           <div>
             <h2>JavaScript</h2>
             <img src={ imgJS } alt="JavaScript" />
