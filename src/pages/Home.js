@@ -31,7 +31,7 @@ export default function Home() {
           <button>Download CV</button>
           {translation
             ? <button className="home-button" onClick={ navToContact }> Contact </button>
-            : <button className="home-button" > Contato </button>}
+            : <button className="home-button"> Contato </button>}
         </div>
       </main>
     </>

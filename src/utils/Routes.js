@@ -53,11 +53,12 @@ export default function Routes() {
           <Home />
         ) }
       />
-      <Route 
-       path="*"
-       render={ () => (
+      <Route
+        path="*"
+        render={ () => (
           <NotFound />
-        ) } />
+        ) }
+      />
     </Switch>
   );
 }
