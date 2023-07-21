@@ -6,16 +6,16 @@ import About from '../pages/About';
 import Blog from '../pages/Blog';
 import Contact from '../pages/Contact';
 import Project from '../pages/Projects';
-import Soft from '../pages/Soft';
+import Skills from '../pages/Skills';
 
 export default function Routes() {
   return (
     <Switch>
       <Route
         exact
-        path="/soft"
+        path="/skills"
         render={ () => (
-          <Soft />
+          <Skills />
         ) }
       />
       <Route

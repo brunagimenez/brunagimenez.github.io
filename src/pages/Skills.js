@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import MenuAside from '../components/MenuAside';
 import Header from '../components/Header';
 import imgJS from '../image/javascript.svg';
@@ -8,14 +8,18 @@ import imgRedux from '../image/redux.svg';
 import imgTesting from '../image/testing.svg';
 import imgSASS from '../image/sass.svg';
 import imgCSS from '../image/css.svg';
+import { TranslationContext } from '../context/TranslationContext';
 
-export default function Soft() {
+export default function Skills() {
+  const { translation } = useContext(TranslationContext);
   return (
     <>
       <MenuAside />
       <Header />
       <main>
-        <h1>Habilidades</h1>
+        { translation
+          ? <h1>Soft</h1>
+          : <h1>Habilidades</h1>}
         <section className="container softIMG">
           <div>
             <h2>JavaScript</h2>

@@ -18,27 +18,47 @@ img:hover + .link-home::before {
     content: 'Home';
 }
 
-img:hover + .link-about::before {
+img:hover + .link-about-pt::before {
     margin-top: -230px;
     content: 'Sobre';
 }
 
-img:hover + .link-soft::before {
-    margin-top: -188px;
+img:hover + .link-about-en::before {
+    margin-top: -230px;
+    content: 'About';
+}
+
+img:hover + .link-skills-pt::before {
+    margin-top: -185px;
     content: 'Habilidades';
 }
 
-img:hover + .link-project::before {
-    margin-top: -140px;
+img:hover + .link-skills-en::before {
+    margin-top: -185px;
+    content: 'Skills';
+}
+
+img:hover + .link-project-pt::before {
+    margin-top: -138px;
     content: 'Projetos';
 }
 
+img:hover + .link-project-en::before {
+    margin-top: -138px;
+    content: 'Projects';
+}
+
 img:hover + .link-blog::before {
-    margin-top: -98px;
+    margin-top: -92px;
     content: 'Blog';
 }
 
-img:hover + .link-contact::before {
-    margin-top: -50px;
+img:hover + .link-contact-pt:before {
+    margin-top: -45px;
     content: 'Contato';
+}
+
+img:hover + .link-contact-en:before {
+    margin-top: -45px;
+    content: 'Contact';
 }
