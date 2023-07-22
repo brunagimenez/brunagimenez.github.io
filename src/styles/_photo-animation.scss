@@ -1,0 +1,37 @@
+  
+  .shape {
+    animation: spin 12s ease-in-out infinite alternate;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: morph 8s ease-in-out infinite both alternate;
+    position: absolute;
+    overflow: hidden;
+    left: 130%;
+    top: -21%;
+    z-index: 5;
+  }
+  
+  .bd {
+    width: 1200px;
+    height: 1200px;
+    transition: border-radius 1s ease-out;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: spin 60s ease-in-out infinite alternate-reverse;
+    position: absolute;
+    overflow: hidden;
+    background-color: $color-trwhite;
+    left: 100%;
+    top: -200%;
+    z-index: 2;
+  }
+  
+  @keyframes morph {
+    0% {border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;} 
+    100% {border-radius: 40% 60%;} 
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }

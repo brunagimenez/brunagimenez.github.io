@@ -1,0 +1,47 @@
+.animation-type {
+    border-right: 3px solid $color-font-white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-animation {
+    animation: blinkCursor 900ms steps(40) infinite normal, typing 4s steps(40) 0s normal;
+}
+
+.to-appear-animation {
+    position: fixed;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 110px;
+    margin-top: -87px;
+    margin-left: -115px;
+    color: $color-trwhitemore;
+    font-weight: 100;
+    animation: toAppear 4s steps(40) 0s normal;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 35em;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: $color-font-white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes toAppear {
+    from {
+        color: transparent;
+    }
+    to {
+        color: $color-trwhitemore;
+    }
+}

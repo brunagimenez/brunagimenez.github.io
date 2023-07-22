@@ -1,13 +1,15 @@
 header {
 //  background-color: $color-font-white ;
  display: flex;
+ position: absolute;
+ width: 100%;
  justify-content: flex-end;
  padding: 8px;
-
    button {
     border: none;
     background-color: rgba(255, 255, 255, 0);
    }
+   z-index: 1;
 }
 
 aside {
@@ -28,6 +30,11 @@ aside {
   a {
     padding: 10px;
   }
+}
+
+.main-home {
+  display: flex;
+  align-items: center
 }
 
 main {
