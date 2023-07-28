@@ -43,3 +43,30 @@
         border-right-color: transparent;
     }
 }
+
+@media (max-width: 768px) {
+    .animation-type-pt {
+        width: 18em;
+    }
+    .animation-type-en {
+        width: 19em;
+    }
+
+    @keyframes typing-en {
+        from {
+            width: 0;
+        }
+        to {
+            width: 20em;
+        }
+    }
+    
+    @keyframes typing-pt {
+        from {
+            width: 0;
+        }
+        to {
+            width: 18em;
+        }
+    }
+}
