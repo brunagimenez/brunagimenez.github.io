@@ -22,34 +22,55 @@ export default function Home() {
     <>
       <Header />
       <MenuAside />
-      <main className="main-home">
-        <section>
-          <h1 className="to-appear-animation">Bruna Gimenez</h1>
-          <div className="home-name animation-type typing-animation">
-            {translation
-              ? <h1>Hi! I&apos;m</h1>
-              : <h1>Olá! Eu sou a </h1>}
-
-            <h1 className="home-firstname">Bruna</h1>
-            <h1>Gimenez</h1>
-          </div>
+      <main>
+        <section className="section-home">
+          {translation
+            ? <h1>Hi!</h1>
+            : <h1>Olá! </h1>}
+          {!translation && <h1>Eu sou a</h1>}
+          {translation
+            ? (
+              <div className="home-name animation-type-en typing-animation-en">
+                <h1>I&apos;m</h1>
+                <h1 className="home-firstname">Bruna</h1>
+                <h1>Gimenez,</h1>
+              </div>
+            )
+            : (
+              <div className="home-name animation-type-pt typing-animation-pt">
+                <h1 className="home-firstname">Bruna</h1>
+                <h1>Gimenez,</h1>
+              </div>
+            )}
           <div className="home-dev">
             {translation
+              ? <h2 className="home-stack">Web </h2>
+              : <h2>Desenvolvedora </h2>}
+            {translation
               ? <h2>Developer</h2>
-              : <h2>Desenvolvedora</h2>}
-
-            <h2 className="home-stack">Full Stack</h2>
+              : <h2 className="home-stack">Web</h2>}
           </div>
-          <div>
-            <button onClick={ handleButtonClick }>Download CV</button>
-            <button className="home-button" onClick={ navToContact }>
+          <h3>
+            Full Stack |
+            JavaScript |
+            TypeScript |
+            ReactJs
+          </h3>
+          <div className="home-button">
+            <button
+              onClick={ handleButtonClick }
+            >
+              Download CV
+
+            </button>
+            <button className="home-button-two" onClick={ navToContact }>
               {translation ? 'Contact' : 'Contato' }
             </button>
           </div>
         </section>
         <section>
           <div className="bd" />
-          <img src={ imgBruna } className="shape" alt="Foto Bruna" width="550px" />
+          <img src={ imgBruna } className="shape" alt="Foto Bruna" width="450px" />
         </section>
       </main>
     </>

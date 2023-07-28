@@ -18,7 +18,7 @@ export default function Skills() {
       <Header />
       <main>
         { translation
-          ? <h1>Soft</h1>
+          ? <h1>Skills</h1>
           : <h1>Habilidades</h1>}
         <section className="container softIMG">
           <div>

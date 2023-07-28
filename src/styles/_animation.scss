@@ -1,32 +1,39 @@
-.animation-type {
+.animation-type-en {
     border-right: 3px solid $color-font-white;
-    white-space: nowrap;
     overflow: hidden;
 }
 
-.typing-animation {
-    animation: blinkCursor 900ms steps(40) infinite normal, typing 4s steps(40) 0s normal;
+.animation-type-pt {
+    border-right: 3px solid $color-font-white;
+    overflow: hidden;
+    width: 30em;
 }
 
-.to-appear-animation {
-    position: fixed;
-    font-family: 'Shantell Sans', cursive;
-    font-size: 110px;
-    margin-top: -87px;
-    margin-left: -115px;
-    color: $color-trwhitemore;
-    font-weight: 100;
-    animation: toAppear 4s steps(40) 0s normal;
+.typing-animation-en {
+    animation: blinkCursor 900ms steps(40) infinite normal, typing-en 4s steps(30) 0s normal;
+}
+.typing-animation-pt {
+    animation: blinkCursor 900ms steps(40) infinite normal, typing-pt 4s steps(30) 0s normal;
 }
 
-@keyframes typing {
+@keyframes typing-en {
     from {
         width: 0;
     }
     to {
-        width: 35em;
+        width: 37em;
     }
 }
+
+@keyframes typing-pt {
+    from {
+        width: 0;
+    }
+    to {
+        width: 30em;
+    }
+}
+
 
 @keyframes blinkCursor {
     from {
@@ -34,14 +41,5 @@
     }
     to {
         border-right-color: transparent;
-    }
-}
-
-@keyframes toAppear {
-    from {
-        color: transparent;
-    }
-    to {
-        color: $color-trwhitemore;
     }
 }
