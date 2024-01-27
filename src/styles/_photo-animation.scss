@@ -8,7 +8,7 @@
     overflow: hidden;
     left: 65%;
     top: 10%;
-    z-index: 5;
+    z-index: 500;
   }
   
   .bd {
@@ -22,7 +22,7 @@
     background-color: $color-trwhite;
     left: 55%;
     top: -20%;
-    z-index: 2;
+    z-index: 500;
   }
   
   @keyframes morph {
@@ -36,11 +36,22 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
+    .shape {
+      width: 300px;
+      left: 70%;
+    }
+    .bd {
+      width: 700px;
+      height: 700px;
+    }
+  }
+
+  @media (max-width: 1000px) {
     .shape {
       width: 0px;
     }
     .bd {
       width: 0;
     }
-}
+  }

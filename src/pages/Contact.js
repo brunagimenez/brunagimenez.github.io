@@ -15,8 +15,8 @@ export default function Contact() {
           : <h1>Contato</h1>}
         <p>email:brunagimenez97@gmail.com</p>
         { translation
-          ? <p>phone:+55(11)99244-4728</p>
-          : <p>tel.:+55(11)99244-4728</p>}
+          ? <p>phone:+55(19)98252-1635</p>
+          : <p>tel.:+55(19)98252-1635</p>}
       </main>
     </>
   );
