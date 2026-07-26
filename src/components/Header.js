@@ -1,42 +1,113 @@
-import React, { useContext, useEffect } from 'react';
-import translateEn from '../image/EN.svg';
-import translatePT from '../image/PT.svg';
-import imgdark from '../image/dark.svg';
-import ligth from '../image/clear.png';
-import { TranslationContext } from '../context/TranslationContext';
-import { DarkContext } from '../context/DarkContext';
+import React, { useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
+import { useLanguage } from '../context/LanguageContext';
+import { scrollToId } from '../utils/scroll';
+
+const NAV_ITEMS = ['about', 'journey', 'skills', 'projects', 'blog', 'contact'];
 
 export default function Header() {
-  const { dark, setDark } = useContext(DarkContext);
-  const { translation, setTranslation } = useContext(TranslationContext);
+  const { dark, toggleTheme } = useTheme();
+  const { lang, setLang, t } = useLanguage();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (dark === true) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [dark]);
-
-  const changeState = (state, funcState) => {
-    if (state === true) {
-      funcState(false);
-    } else {
-      funcState(true);
-    }
+  const navigate = (id) => (event) => {
+    event.preventDefault();
+    setMenuOpen(false);
+    scrollToId(id);
   };
+
   return (
-    <header>
-      <button onClick={ () => changeState(translation, setTranslation) }>
-        {translation
-          ? <img src={ translatePT } alt="Traduza para o português" width="50px" />
-          : <img src={ translateEn } alt="Translate for English" width="50px" />}
-      </button>
-      <button onClick={ () => changeState(dark, setDark) }>
-        {dark
-          ? <img src={ ligth } alt="Ativar modo clean" width="60px" />
-          : <img src={ imgdark } alt="Ativar modo dark" width="60px" />}
-      </button>
+    <header className="site-header">
+      <div className="site-header__backdrop" />
+      <div className="site-header__inner">
+        <a href="#top" className="logo" onClick={ navigate('top') }>
+          BG<span className="logo-dot">.</span>
+        </a>
+
+        <nav aria-label="Navegação principal" className="nav-desktop">
+          {NAV_ITEMS.map((id) => (
+            <a key={ id } href={ `#${id}` } className="nav-link" onClick={ navigate(id) }>
+              {t.nav[id]}
+            </a>
+          ))}
+          <div className="header-controls">
+            <div className="lang-switch" role="group" aria-label="Idioma">
+              <button
+                type="button"
+                className={ `lang-switch__btn ${lang === 'pt' ? 'is-active' : ''}` }
+                aria-pressed={ lang === 'pt' }
+                onClick={ () => setLang('pt') }
+              >
+                PT
+              </button>
+              <button
+                type="button"
+                className={ `lang-switch__btn ${lang === 'en' ? 'is-active' : ''}` }
+                aria-pressed={ lang === 'en' }
+                onClick={ () => setLang('en') }
+              >
+                EN
+              </button>
+            </div>
+            <button
+              type="button"
+              className="theme-toggle"
+              aria-label={ dark ? t.theme.toLight : t.theme.toDark }
+              onClick={ toggleTheme }
+            >
+              <span className={ `theme-toggle__knob ${dark ? 'is-dark' : ''}` } />
+            </button>
+          </div>
+        </nav>
+
+        <div className="header-controls header-controls--mobile">
+          <div className="lang-switch" role="group" aria-label="Idioma">
+            <button
+              type="button"
+              className={ `lang-switch__btn ${lang === 'pt' ? 'is-active' : ''}` }
+              aria-pressed={ lang === 'pt' }
+              onClick={ () => setLang('pt') }
+            >
+              PT
+            </button>
+            <button
+              type="button"
+              className={ `lang-switch__btn ${lang === 'en' ? 'is-active' : ''}` }
+              aria-pressed={ lang === 'en' }
+              onClick={ () => setLang('en') }
+            >
+              EN
+            </button>
+          </div>
+          <button
+            type="button"
+            className="theme-toggle"
+            aria-label={ dark ? t.theme.toLight : t.theme.toDark }
+            onClick={ toggleTheme }
+          >
+            <span className={ `theme-toggle__knob ${dark ? 'is-dark' : ''}` } />
+          </button>
+          <button
+            type="button"
+            className="menu-button"
+            aria-label={ menuOpen ? t.nav.close : t.nav.menu }
+            aria-expanded={ menuOpen }
+            onClick={ () => setMenuOpen((open) => !open) }
+          >
+            {menuOpen ? t.nav.close : t.nav.menu}
+          </button>
+        </div>
+      </div>
+
+      {menuOpen && (
+        <div className="mobile-nav">
+          {NAV_ITEMS.map((id) => (
+            <a key={ id } href={ `#${id}` } className="mobile-nav__link" onClick={ navigate(id) }>
+              {t.nav[id]}
+            </a>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

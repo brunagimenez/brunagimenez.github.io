@@ -1,34 +1,27 @@
-//color clean
-
-$color-additional-blue:#4158D0;
-$color-secondy-pink:#C850C0;
-$color-primary-yellow: #FFCC70;
-$color-font-white: white;
-
-//color with transparent
-$color-additional-trblue:#4159d059;
-$color-secondy-trpink:#c850c053;
-$color-primary-tryellow: #ffcd705d;
-$color-trwhite: rgba(255, 255, 255, 0.266);
-$color-trwhitemore: rgba(255, 255, 255, 0.06);
-
-@mixin elavation (){
-    box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.025)
+:root {
+  --bg: #faf7f8;
+  --surface: #ffffff;
+  --surface-alt: #f4eef1;
+  --border: #e9dfe3;
+  --text: #211b21;
+  --text-muted: #6c616a;
+  --accent-rose: #e0889c;
+  --accent-indigo: #4f57ce;
+  --accent-indigo-soft: #e8e9fb;
+  --shadow: 0 20px 60px rgba(76, 45, 58, 0.14);
+  --header-bg: rgba(250, 247, 248, 0.82);
 }
 
-//color dark
-
-$color-additional-black:#000000;
-$color-secondy-cinza:#203c4b;
-$color-primary-cinza: #313430;
-
-//color with transparent
-$color-additional-trblack:#0000005b;
-$color-secondy-trcinza:#203c4b5a;
-$color-primary-trcinza: #31343060;
-$color-trwhite: rgba(255, 255, 255, 0.266);
-
-@mixin BackgroudPage ($value1, $value2, $value3){
-background-color: $value1;
-background-image: linear-gradient(43deg, $value1 0%, $value2 50%, $value3 100%);
+body.dark {
+  --bg: #030608;
+  --surface: #0c1417;
+  --surface-alt: #29383e;
+  --border: #2c3d43;
+  --text: #eef2f3;
+  --text-muted: #9db0b6;
+  --accent-rose: #e0889c;
+  --accent-indigo: #8890f2;
+  --accent-indigo-soft: rgba(136, 144, 242, 0.18);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --header-bg: rgba(3, 6, 8, 0.82);
 }

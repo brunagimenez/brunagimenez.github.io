@@ -1,0 +1,180 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.4s ease;
+}
+
+// Kept off `.site-header` itself: `backdrop-filter` establishes a containing
+// block for `position: fixed` descendants, which would trap `.mobile-nav`
+// inside this 76px bar instead of letting it cover the viewport.
+.site-header__backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--header-bg);
+  backdrop-filter: blur(14px);
+  transition: background-color 0.4s ease;
+  z-index: 0;
+}
+
+.site-header__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 48px);
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+
+  .logo-dot {
+    color: var(--accent-rose);
+  }
+}
+
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 34px);
+
+  @media (min-width: 860px) {
+    display: flex;
+  }
+}
+
+.nav-link {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text);
+  }
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: 6px;
+  padding-left: 16px;
+  border-left: 1px solid var(--border);
+
+  &--mobile {
+    display: flex;
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
+
+    @media (min-width: 860px) {
+      display: none;
+    }
+  }
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  background: var(--surface-alt);
+  border-radius: 999px;
+  padding: 4px;
+  gap: 2px;
+  border: 1px solid var(--border);
+}
+
+.lang-switch__btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-muted);
+
+  &.is-active {
+    background: var(--surface);
+    color: var(--text);
+  }
+}
+
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 27px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.theme-toggle__knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--accent-indigo);
+  transition: left 0.25s ease;
+
+  &.is-dark {
+    left: 25px;
+  }
+}
+
+.menu-button {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+
+  @media (min-width: 860px) {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  z-index: 1;
+  inset: 76px 0 0 0;
+  background: var(--bg);
+  padding: 24px clamp(20px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+
+  @media (min-width: 860px) {
+    display: none;
+  }
+}
+
+.mobile-nav__link {
+  font-size: 19px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+}

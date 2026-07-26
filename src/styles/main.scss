@@ -1,10 +1,8 @@
-@import '_colors.scss';
-@import '_fonts.scss';
-@import '_animation.scss';
-@import '_home.scss';
-@import '_photo-animation.scss';
-@import '_components.scss';
-@import '_layout.scss';
-@import '_menu.scss';
-@import '_base.scss';
-
+@import 'colors';
+@import 'base';
+@import 'animations';
+@import 'header';
+@import 'hero';
+@import 'buttons';
+@import 'sections';
+@import 'projects';
